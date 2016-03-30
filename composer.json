@@ -1,0 +1,13 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Dukt\\OAuth\\Providers\\": "providers/oauth/",
+      "Dukt\\OAuth\\OAuth2\\Client\\Provider\\": "providers/league/",
+      "Dukt\\OAuth\\Guzzle\\Subscribers\\": "subscribers/"
+    }
+  },
+  "scripts": {
+    "post-update-cmd": ["echo [WARNING] Delete all .git dirs", "rm -rf vendor/**/**/.git", "echo [WARNING] Delete all .gitignore", "rm -rf vendor/**/**/.gitignore"],
+    "post-install-cmd": ["echo [WARNING] Delete all .git dirs", "rm -rf vendor/**/**/.git", "echo [WARNING] Delete all .gitignore", "rm -rf vendor/**/**/.gitignore"]
+  }
+}
