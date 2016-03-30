@@ -37,6 +37,15 @@ class AzurePlugin extends BasePlugin
     {
         return 'https://mccallister.io';
     }
+    /**
+     * Define the URL to the releases.
+     *
+     * @return string URL to the releases.json
+     */
+    public function getReleaseFeedUrl()
+    {
+        return 'https://raw.githubusercontent.com/themccallister/craft-azure/master/releases.json';
+    }
 
     /**
      * Returns required plugins
