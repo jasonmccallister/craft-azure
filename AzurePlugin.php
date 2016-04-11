@@ -15,11 +15,21 @@ class AzurePlugin extends BasePlugin
     }
 
     /**
+     * Plugins description.
+     *
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return Craft::t('Azure AD Provider for OAuth');
+    }
+
+    /**
      * Get Version
      */
     public function getVersion()
     {
-        return '1.0.0';
+        return '2.0.0';
     }
 
     /**
@@ -37,15 +47,6 @@ class AzurePlugin extends BasePlugin
     {
         return 'https://mccallister.io';
     }
-    /**
-     * Define the URL to the releases.
-     *
-     * @return string URL to the releases.json
-     */
-    public function getReleaseFeedUrl()
-    {
-        return 'https://raw.githubusercontent.com/themccallister/craft-azure/master/releases.json';
-    }
 
     /**
      * Returns required plugins
@@ -54,14 +55,14 @@ class AzurePlugin extends BasePlugin
      */
     public function getRequiredPlugins()
     {
-        return [
-            [
+        return array(
+            array(
                 'name' => "OAuth",
                 'handle' => 'oauth',
                 'url' => 'https://dukt.net/craft/oauth',
-                'version' => '1.0.0'
-            ]
-        ];
+                'version' => '2.0.0'
+            )
+        );
     }
 
     /**
@@ -69,9 +70,12 @@ class AzurePlugin extends BasePlugin
      */
     public function getOauthProviders()
     {
+        require_once(CRAFT_PLUGINS_PATH . 'azure/providers/Azure.php');
+
         return [
-            'Dukt\OAuth\Providers\Azure'
+            'Dukt\OAuth\Providers\Azure',
         ];
+
     }
 
     /**

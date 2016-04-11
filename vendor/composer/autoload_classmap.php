@@ -6,6 +6,4 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Dukt\\OAuth\\OAuth2\\Client\\Provider\\Azure' => $baseDir . '/providers/league/Azure.php',
-    'Dukt\\OAuth\\Providers\\Azure' => $baseDir . '/providers/oauth/Azure.php',
 );
