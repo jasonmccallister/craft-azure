@@ -1,5 +1,13 @@
 [
     {
+        "version": "2.0.0",
+        "downloadUrl": "https://github.com/themccallister/craft-azure/archive/2.0.0.zip",
+        "date": "2016-04-11T17:38:23.124Z",
+        "notes": [
+            "[Added] Compatability with Dukt OAuth 2.0 pre-release"
+        ]
+    },
+    {
         "version": "1.0.0",
         "downloadUrl": "https://github.com/themccallister/craft-azure/archive/1.0.0.zip",
         "date": "2016-03-30T17:38:23.124Z",
